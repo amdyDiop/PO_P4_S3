@@ -1,0 +1,48 @@
+<div class="sidebar" data-color="green" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
+  <div class="logo">
+    <a href="" class="simple-text logo-normal">
+      GESTION DES ACCORD
+    </a>
+  </div>
+  <div class="sidebar-wrapper">
+    <ul class="nav">
+      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+        <a class="nav-link" routerLink="/admin/dashboard">
+          <i class="material-icons">home</i>
+          <p>ACCUEIL</p>
+        </a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a data-toggle="collapse" class="nav-link collapsed"
+           href="#user" aria-expanded="false" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+          <i class="material-icons">receipt long</i>
+          <p>Accord<b class="caret"></b></p></a>
+        <div class="collapse" id="user" style="">
+          <ul class="nav">
+            <li class="nav-item " routerLinkActive="list-accord" [routerLinkActiveOptions]="{exact:true}">
+              <a class="nav-link" routerLink="/list-accord" routerLinkActive="active"
+                 [routerLinkActiveOptions]="{exact:true}">
+                <i class="material-icons">list</i>
+                <p> Liste Accord</p>
+              </a>
+            </li>
+            <li class="nav-item " routerLinkActive="add-accord" [routerLinkActiveOptions]="{exact:true}">
+              <a class="nav-link" routerLink="/add-accord" routerLinkActive="active"
+                 [routerLinkActiveOptions]="{exact:true}">
+                <i class="material-icons">add box</i>
+                <p>Ajouter accord</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a data-toggle="collapse" class="nav-link collapsed"
+           href="#parametre" aria-expanded="false" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+          <i class="material-icons">build</i>
+          <p>Parametre<b class="caret"></b></p></a>
+      </li>
+    </ul>
+    <br><br>
+  </div>
+</div>

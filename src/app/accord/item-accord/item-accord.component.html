@@ -1,0 +1,39 @@
+<div class="card card-product">
+  <div class="card-header card-header-rose" data-header-animation="true">
+    <div class="title">{{accord.libelle}}</div>
+  </div>
+  <div class="card-body">
+    <div class="card-actions text-center">
+      <a [routerLink]="['/admin/accord','show',accord.id]">
+        <button mat-raised-button="" type="button"
+                class="btn btn-default btn-link mat-raised-button mat-button-base">
+            <span class="mat-button-wrapper">
+              <i class="material-icons">art_track</i>
+            </span>
+        </button>
+      </a>
+      <a [routerLink]="['/admin/accord','edit',accord.id]">
+        <button mat-raised-button="" type="button"
+                class="btn btn-success btn-link mat-raised-button mat-button-base">
+          <span class="mat-button-wrapper">
+            <i class="material-icons">edit</i></span>
+        </button>
+      </a>
+      <button mat-raised-button="" type="button"
+              class="btn btn-danger btn-link mat-raised-button mat-button-base">
+            <span class="mat-button-wrapper">
+              <i class="material-icons">close</i></span>
+      </button>
+    </div>
+    <h4 class="card-title">Date de Création</h4>
+    <p class="card-category">
+      {{accord.createdAt | date:('dd-MM-yyy') }}
+    </p>
+  </div>
+  <div class="card-footer">
+    <div class="stats">
+      <!--pdf-viewer [src]="pdfSrc" [render-text]="true" style="display: inline;"></pdf-viewer-->
+      <i class="material-icons">info</i> vous verrez les autres informations dans le detail
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header card-header-success">
+        <h4 class="card-title">Ajouter Accord</h4>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <h3>Télécharger le Accord</h3>
+                <p-fileUpload url="" (onSelect)="onUpload($event)" showUploadButton="false"
+                              accept="image/*,application/pdf" maxFileSize="2000000" >
+                  <ng-template pTemplate="content">
+                    <ul *ngIf="uploadedFiles.length">
+                      <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
+                    </ul>
+                  </ng-template>
+                </p-fileUpload>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-success pull-right">Ajouter</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

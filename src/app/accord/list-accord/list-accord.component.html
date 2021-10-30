@@ -1,0 +1,39 @@
+<div class="card">
+  <div class="card-header card-header-rose">
+    <h4 class="card-title ">Liste des Référencetiels</h4>
+    <div class="nav-tabs-navigation">
+      <div class="nav-tabs-wrapper">
+        <span class="nav-tabs-title">Filtre:</span>
+        <ul class="nav nav-tabs" data-tabs="tabs">
+          <li class="nav-item mt-2">
+            <a class="nav-link active" href="" data-toggle="tab">
+              <i class="material-icons">check</i> En cours
+            </a>
+          </li>
+          <li class="nav-item mt-2">
+            <a class="nav-link" href="" data-toggle="tab">
+              <i class="material-icons">block</i> Clocturer
+              <div class="ripple-container"></div>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="" data-toggle="tab">
+              <input type="text" placeholder="Recherche" pInputText/>
+              <div class="ripple-container"></div>
+            </a>
+          </li>
+          <div class="col float-right mt-2">
+            <a routerLink="/admin/referentiels/add" routerLinkActive="active">
+              <button class="btn btn-white btn-round btn-fab float-right">
+                <span class="mat-button-wrapper"><i class="material-icons">add_circle</i></span>
+              </button>
+            </a>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <app-item-accord class="col-sm-4 mb-4 mt-4" *ngFor="let item of accords " [accord]="item" ></app-item-accord>
+</div>

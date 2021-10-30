@@ -1,0 +1,39 @@
+<div class="wrapper ">
+  <div class="content ">
+    <div class="container-fluid">
+      <div class="row center-align">
+        <div class="col-md-6  m-t-4  flex-auto" style="margin: 0 auto; margin-top: 10%;">
+          <div class="card">
+            <div class="card-header card-header-success">
+              <h4 class="card-title">Gestion Des Accord</h4>
+              <p class="card-category">SERVICE CENTRAL D'AUTHENTIFICATION</p>
+            </div>
+            <div class="card-body">
+              <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label class="bmd-label-floating">Login</label>
+                      <input type="text" class="form-control" name="login" [formControl]="myForm.controls['login']">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label class="bmd-label-floating">Mot de Passe</label>
+                      <input type="password" class="form-control" name="passeword"   [formControl]="myForm.controls['password']">
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-success pull-center">Se Connecter</button>
+                <div class="clearfix"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
